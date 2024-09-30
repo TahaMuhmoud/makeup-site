@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  @apply font-one font-bold p-0 m-0 box-border;
+}
+.section-header {
+  @apply text-3xl sm:text-5xl font-one italic font-black;
+}
+::-webkit-scrollbar {
+  @apply w-3;
+}
+::-webkit-scrollbar-track {
+  @apply bg-three;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-two;
+}
+.scrollbar::-webkit-scrollbar {
+  @apply h-1;
+}
+.scrollbar::-webkit-scrollbar-track {
+  @apply bg-three;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-two;
+}
+body:where([data-mode="dark"], [data-mode="dark"] *) {
+  @apply bg-main-dark text-white;
+}
+.bg-white:where([data-mode="dark"], [data-mode="dark"] *) {
+  @apply bg-main-dark;
+}
+.text-black:where([data-mode="dark"], [data-mode="dark"] *) {
+  @apply text-white;
+}
+.bg-black-half:where([data-mode="dark"], [data-mode="dark"] *) {
+  @apply bg-secondary-dark;
+}
+.text-black-half:where([data-mode="dark"], [data-mode="dark"] *) {
+  @apply text-white/50;
+}
+.shadow-black-half:where([data-mode="dark"], [data-mode="dark"] *) {
+  @apply shadow-white/50;
+}
+.border-white:where([data-mode="dark"], [data-mode="dark"] *),
+.border-white:hover {
+  @apply border-main-dark;
+}
+
+.bg-three:where([data-mode="dark"], [data-mode="dark"] *) {
+  @apply bg-secondary-dark;
+}
+.text-three:where([data-mode="dark"], [data-mode="dark"] *) {
+  @apply border-secondary-dark;
+}
+.border-three:where([data-mode="dark"], [data-mode="dark"] *) {
+  @apply border-secondary-dark;
+}
+.shadow-three:where([data-mode="dark"], [data-mode="dark"] *) {
+  @apply shadow-secondary-dark;
+}
